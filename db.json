@@ -1,0 +1,24 @@
+{
+  "product": [
+    {
+      "productno": 1,
+      "productname": "laptop",
+      "productqty": "good",
+      "netprice": 30000,
+      "customer no": 34,
+      "id": "e0b2"
+    },
+    {
+      "id": "7649"
+    },
+    {
+      "id": "3d96"
+    },
+    {
+      "id": "3ed6"
+    },
+    {
+      "id": "b743"
+    }
+  ]
+}
