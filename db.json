@@ -1,24 +1,18 @@
 {
-  "product": [
+  "PUT": [
     {
-      "productno": 1,
-      "productname": "laptop",
-      "productqty": "good",
-      "netprice": 30000,
-      "customer no": 34,
-      "id": "e0b2"
+      "name": "himanshi",
+      "age": 20,
+      "email": "hgdfgjaskgjj",
+      "contact": 643543172736,
+      "id": "ab35"
     },
     {
-      "id": "7649"
-    },
-    {
-      "id": "3d96"
-    },
-    {
-      "id": "3ed6"
-    },
-    {
-      "id": "b743"
+      "id": "78a0",
+      "name": "sakshi",
+      "age": "7",
+      "email": "malviya12@gmail.com",
+      "contact": "547647"
     }
   ]
 }
