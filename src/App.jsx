@@ -48,7 +48,7 @@ import { useState } from "react";
 const Home=()=>{
   const[add,setAdd]=useState(0);
   const[sub,setSub]=useState("");
-  // function myMulti()=>{
+  // function myMulti(=>{
   //   console.log("***********");
   // return add*2;
     
