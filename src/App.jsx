@@ -48,11 +48,11 @@ import { useState } from "react";
 const Home=()=>{
   const[add,setAdd]=useState(0);
   const[sub,setSub]=useState("");
-  function myMulti()=>{
-    console.log("***********");
-  return add*2;
+  // function myMulti()=>{
+  //   console.log("***********");
+  // return add*2;
     
-  ),}
+  // ),}
   return(
     <>
     <h1>welcome!!!</h1>
