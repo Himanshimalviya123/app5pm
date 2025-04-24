@@ -1,32 +1,52 @@
-import { BrowserRouter,Routes,Route } from "react-router";
-import Layout from "./layout";
-import Home from "./home";
-import Insert from "./insert";
-import Display from "./display";
-import Search from "./search";
-import Update from "./update";
-import MyEdit from "./myedit";
-
-const APP=()=>{
-    return(
-        <>
-<BrowserRouter>
-<Routes>
-    <Route path="/" element={<Layout/>}>
-    <Route index element={<Home/>}/>
-    <Route path="home" element={<Home/>}/>
-  <Route path="insert" element={<Insert/>}/>
-    <Route path="display" element={<Display/>}/>
-    <Route path="search" element={<Search/>}/>
-    <Route path="update" element={<Update/>}/>
-    <Route path="myedit/:id" element={<MyEdit/>}/>
+// import { useState } from "react";
+// import { useMemo } from "react";
+// const App=()=>{ 
+//   const [add,setAdd]=useState(0);
+//   const [sub,setSub]=useState(100);
+//   const myMulti=useMemo(()=>{
+ 
     
+//       console.log("*****");
+//       return add*2;
+//     }
+//   )
+//   return(
+//     <>
+//     <h1>welcome to usememo hook</h1>
+//     <h1>mutiplication: {myMulti}</h1>
+//     <button onClick={()=>{setAdd(add+1)}}>increment</button>
+//     <h3>increment: {add}</h3>
+//     <button onClick={()=>{setSub(sub-1)}}>decrement</button>
+//     <h3>increment: {sub}</h3>
+
+//     </>
+//   )
+// }
+// export default App;
 
 
-    </Route>
-</Routes>
-</BrowserRouter>
-        </>
-    )
+
+import { useState,useMemo } from "react";
+const App=()=>{
+  const[mynum,setMynum]=useState(0);
+  const[name,setName]=useState("");
+  const myMulti=useMemo(()=>{
+    for(var i=0; i<10000000;i++){}
+    return mynum*2;
+  },[mynum])
+  return(
+    <>
+
+      <h1>Welcome!!!</h1>
+      Select Number: <input type="number" value={mynum}  
+      onChange={(e)=>{setMynum(e.target.value)}}/>
+       Select Name: <input type="text" value={name}  
+      onChange={(e)=>{setName(e.target.value)}}/>
+      <hr />
+      <h1>Multiplication:{myMulti}</h1>
+    </>
+  )
 }
-export default APP;
+export default App;
+
+
