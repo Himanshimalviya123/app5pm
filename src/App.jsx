@@ -20,7 +20,7 @@
 //   )
 // }
 // export default App;
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
 // import { useState,useMemo } from "react";
 // const App=()=>{
 //   const[mynum,setMynum]=useState(0);
@@ -48,19 +48,19 @@ import { useState } from "react";
 const Home=()=>{
   const[add,setAdd]=useState(0);
   const[sub,setSub]=useState("");
-  // function myMulti(=>{
-  //   console.log("***********");
-  // return add*2;
+  function myMulti() {
+    console.log("***********");
+  return add*2
     
-  // ),}
+  ,[add]}
   return(
     <>
     <h1>welcome!!!</h1>
     <h3>addition:{add}</h3>
-    <button onClick={(e)=>{setAdd(e.target.value)}}>add</button>
+    <button onClick={()=>{setAdd(add+1)}}>add</button>
     <h3>subtraction:{sub}</h3>
-    <button onClick={(e)=>{setSub(e.target.value)}}>sub</button>
-    <h1>multiplication:{myMulti}</h1>
+    <button onClick={()=>{setSub(sub-1)}}>sub</button>
+    <h1>multiplication:{myMulti()}</h1>
     </>
   )
 }
