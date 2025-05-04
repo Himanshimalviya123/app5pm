@@ -86,11 +86,17 @@
 // export {myContext};
 
 // \\\\\\\\\\\\\\\\\\\\\\\\\\\\( toolkit )\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+import { useSelector,useDispatch } from "react-redux";
+
 const App=()=>{ 
+    const work=useSelector("");
+    const dispatch=useDispatch();
     return (
         <>
         <h1>welcome to to-do app </h1>
-        enter your task:<input type="text" />
+        enter your task:<input type="text"/>
+        <button onClick={()=>{dispatch()}}>add</button>
+        <hr/>
         </>
     )
 }
