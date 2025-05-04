@@ -86,16 +86,12 @@
 // export {myContext};
 
 // \\\\\\\\\\\\\\\\\\\\\\\\\\\\( toolkit )\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-import { useSelector,useDispatch } from "react-redux";
-import { changename } from "./nameslice";
-const app=()=>{
-    const username=useSelector(state=>state.mychange.user);
-    const dispatch=useDispatch();
-return(
-    <>
-    <h1>hello:{username}</h1>
-    <button onClick={()=>{dispatch(changename())}}>change</button>
-    </>
-)
+const App=()=>{ 
+    return (
+        <>
+        <h1>welcome to to-do app </h1>
+        enter your task:<input type="text" />
+        </>
+    )
 }
-export default app;
+export default App;

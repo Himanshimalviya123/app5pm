@@ -1,7 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
+import { useReducer } from "react";
 const Store=configureStore({
 reducer:{
-    g
+    
 }
-})
+}
+)
+
+    
+
 export default Store;
