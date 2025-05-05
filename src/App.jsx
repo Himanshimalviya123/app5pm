@@ -115,7 +115,7 @@ const App=()=>{
                onChange={(e)=>{setVal(e.target.value)}}/>
         <button onClick={()=>{dispatch(addtask({task:val}))}}>add</button>
         <hr/>
-        <table>
+        <table border="2px solid black" width="200">
             <tr>
                 <td>sno</td>
                 <td>data</td>
