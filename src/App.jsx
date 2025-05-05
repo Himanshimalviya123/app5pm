@@ -87,16 +87,41 @@
 
 // \\\\\\\\\\\\\\\\\\\\\\\\\\\\( toolkit )\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 import { useSelector,useDispatch } from "react-redux";
-
+import { addtask } from "./todoslice";
+import { useState } from "react";
 const App=()=>{ 
-    const work=useSelector("");
+    const work=useSelector(state=>state.todo.task);
     const dispatch=useDispatch();
+    const [val,setVal]=useState("");
+    console.log(work);
+    let sno=0;
+    const ans=work.map((key)=>{
+      sno++;
+      return(
+        <>
+        <tr>
+          <td>{sno}</td>
+          <td>{key.task}</td>
+        </tr>
+        </>
+      )
+    })
+   
+    
     return (
         <>
         <h1>welcome to to-do app </h1>
-        enter your task:<input type="text"/>
-        <button onClick={()=>{dispatch()}}>add</button>
+        enter your task:<input type="text" value={val}
+               onChange={(e)=>{setVal(e.target.value)}}/>
+        <button onClick={()=>{dispatch(addtask({task:val}))}}>add</button>
         <hr/>
+        <table>
+            <tr>
+                <td>sno</td>
+                <td>data</td>
+            </tr>
+            {ans}
+        </table>
         </>
     )
 }

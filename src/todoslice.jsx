@@ -4,10 +4,12 @@ const Todoslice=createSlice({
     initialState:{
         task:[],
     },
-    reducers:(state,actions)=>{
+    reducers:{
+       addtask: (state,actions)=>{
     console.log(actions);
-    state.task.push(actions);
+    state.task.push(actions.payload);
     }
-    
+} 
 })
-export default Todoslice;
+ export const  {addtask}=Todoslice.actions;
+export default Todoslice.reducer;
